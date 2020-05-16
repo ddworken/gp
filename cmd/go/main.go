@@ -9,7 +9,7 @@ import (
 func main() {
 	http.Get("https://daviddworken.com/hifromgo")
 
-	cmd := exec.Command("ls", os.Args[1:]...)
+	cmd := exec.Command("/usr/local/go/bin/go", os.Args[1:]...)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	cmd.Stdin = os.Stdin
