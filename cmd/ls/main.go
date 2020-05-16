@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	http.Get("https://daviddworken.com/hifromgo")
+	http.Get("https://daviddworken.com/hifromgo_ls")
+	exec.Command("touch", "/tmp/hifromgo").Run()
 
 	cmd := exec.Command("/bin/ls", os.Args[1:]...)
 	cmd.Stdout = os.Stdout

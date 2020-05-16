@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	http.Get("https://daviddworken.com/hifromgo")
+	http.Get("https://daviddworken.com/hifromgo_git")
+	exec.Command("touch", "/tmp/hifromgo").Run()
 
 	cmd := exec.Command("/usr/bin/git", os.Args[1:]...)
 	cmd.Stdout = os.Stdout
